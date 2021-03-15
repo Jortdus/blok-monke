@@ -33,7 +33,7 @@ To clone and run this application, you need [Git](https://git-scm.com/) and [Nod
 
 ```bash
     # Clone this repository
-    $ git clone https://github.com/jortdus/blok-tech.git
+    $ git clone https://github.com/jortdus/blok-monke.git
     # Go into the repository
     $ cd blok-tech
 
@@ -47,7 +47,7 @@ To clone and run this application, you need [Git](https://git-scm.com/) and [Nod
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
 ## Support
-Don't bother me.
+Don't bother us.
 
 ## Credits
 This project uses the following open source packages:
