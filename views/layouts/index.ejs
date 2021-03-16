@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+    <main>
+        <h1>Gamematch</h1>
+        <h3>Login</h3>
+        <%= message %>
+        <form action="/login" method="POST">
+            <label>
+                Your SteamID
+                <input type="text" name="id" placeholder="steamID">
+            </label>
+            <input type="submit" value="Log in">
+        </form>
+        <h3>or</h3>
+        <a href="https://store.steampowered.com/login/">
+            <img src="../static/img/steamimg.jpg" id="steamimg" alt="">
+        </a>
+    </main>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+
+</html>
