@@ -7,8 +7,9 @@ const connectDB = require('./model/db.js')
 // const SteamAPI = require('steamapi');
 // const steam = new SteamAPI(process.env.STEAMAPI);
 const User = require("./model/user.js")
-const router = require("./route/steamFetch.js")
+const steamFetch = require("./route/steamFetch.js")
 const profile = require("./route/profile.js")
+const likeFeature = require("./route/likeFeature")
 
 // call on db connection module
 connectDB();
@@ -27,8 +28,9 @@ app.use('/static', express.static(__dirname + '/static'))
 app.set('view engine', 'ejs')
 
 // rendering
-app.use(router)
+app.use(steamFetch)
 app.use(profile)
+app.use(likeFeature)
 
 // 404 error handling 
 app.use(function (req, res, next) {
