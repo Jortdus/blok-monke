@@ -7,13 +7,13 @@ let persoon = {
   voornaam: 'Fabian', achternaam:'Vis', liked:[]
 }
 
-router.get('/', (req, res) => {
-    res.render('pages/home.ejs', {profiel:persoon})
+router.get('/addFeature', (req, res) => {
+    res.render('layouts/addFeature.ejs', {profiel:persoon})
   })
 
   // Hier wordt alles uit de database gehaald zodat het op de /liked pagina weergegeven kan worden.
   router.get('/liked', (req, res) => {
-    Persoon.find().then(results =>  res.render('pages/liked.ejs', 
+    Persoon.find().then(results =>  res.render('layouts/liked.ejs', 
     {
         personen: results,
         profiel: persoon,
