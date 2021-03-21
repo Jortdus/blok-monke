@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+
+    <header>
+        <%- include('../partials/header');%>
+    </header>
+
+    <main>   
+        <section>
+            <h2>Welcome <%= profiel.voornaam %> <%= profiel.achternaam %></h2>
+            <h1>People you Liked</h1>
+            <h3>Filter</h3>
+        </section> 
+
+        <section>
+            <ul>
+                <% personen.forEach(function(persoon) { %>
+                <li>
+                    <h1><%= persoon.voornaam +  ' ' + persoon.achternaam%></h1>
+                    <h1><%= persoon.gamertag%></h1>
+                    <button data-id="<%=persoon._id%>">Remove</button>
+                </li>
+                <% });%>
+            </ul>
+        </section>  
+    </main>
+    <footer>
+        <%- include('../partials/footer');%>
+    </footer>
+    <script src="../../static/script/deleteButton.js"></script>
+</body>
+</html>
