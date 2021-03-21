@@ -9,7 +9,7 @@ const connectDB = require('./model/db.js')
 const User = require("./model/user.js")
 const steamFetch = require("./route/steamFetch.js")
 const profile = require("./route/profile.js")
-const likeFeature = require("./route/likeFeature.js")
+const likeFeature = require("./route/likeFeature")
 
 // call on db connection module
 connectDB();
