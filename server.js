@@ -11,6 +11,10 @@ const steamFetch = require("./route/steamFetch.js")
 const profile = require("./route/profile.js")
 const likeFeature = require("./route/likeFeature")
 const addGameFeature = require("./route/addGameFeature")
+const likingFeature = require('./route/liking.js')
+
+
+
 
 // call on db connection module
 connectDB();
@@ -33,6 +37,7 @@ app.use(steamFetch)
 app.use(profile)
 app.use(likeFeature)
 app.use(addGameFeature)
+app.use(likingFeature)
 
 // 404 error handling
 app.use(function (req, res, next) {
