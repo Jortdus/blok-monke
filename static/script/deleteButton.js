@@ -3,14 +3,14 @@ document.querySelectorAll('button').forEach(button => button.addEventListener('c
 
 
 function verwijderLike(klikevent) {
-    // Je haalt het id op en plaats je het in de URL vervolgens gebruik je de methode DELETE
-    fetch('/delete?id=' + klikevent.target.dataset.id, {
-        method: 'DELETE' 
+  // Je haalt het id op en plaats je het in de URL vervolgens gebruik je de methode DELETE
+  fetch('/delete?id=' + klikevent.target.dataset.id, {
+      method: 'DELETE'
     })
     .then(response => {
-        return response.text()
+      return response.text()
     }).then(tekst => {
-        // Als de tekst hetzelfde is als Gelukt reload hij zodat de verwijdere persoon weg is.
-        if (tekst === 'Gelukt') window.location.reload()
+      // Als de tekst hetzelfde is als Gelukt reload hij zodat de verwijdere persoon weg is.
+      if (tekst === 'Gelukt') window.location.reload()
     })
 }
