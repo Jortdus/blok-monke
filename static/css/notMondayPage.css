@@ -1,0 +1,32 @@
+.notMondayMain {
+  height: 90vh;
+}
+
+.notMondayMain h1 {
+  font-size: 1.7em;
+  position: absolute;
+  top: 12vh;
+}
+
+.notMondayMain p {
+  font-size: 1em;
+  position: absolute;
+  top: 35vh;
+  right: 9vw;
+  width: 50vw;
+}
+
+.notMondayMain h4 {
+  font-size: 1em;
+  font-style: italic;
+  position: absolute;
+  bottom: 32vh;
+}
+
+.notMondayMain img {
+  height: 19%;
+  width: auto;
+  position: absolute;
+  bottom: 5vh;
+  left: 30%;
+}
