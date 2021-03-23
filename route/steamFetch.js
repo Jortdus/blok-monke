@@ -5,13 +5,22 @@ const User = require("../model/user.js")
 const SteamAPI = require('steamapi');
 const steam = new SteamAPI(process.env.STEAMAPI);
 
+let now  = new Date();
+let day = 1; // er staat nu 1, maar dit moet now.getDay() worden om de dag te checken
+
+console.log(day);
+
 router.get('/', (req, res) => {
+  if ( day == 1 ) {
     const { error } = req.query
     if (error && error === 'No match') {
         res.render('layouts/index', { message: 'User not found' })
         return
     }
     res.render('layouts/index', { message: '' })
+  } else {
+    res.render('layouts/notMonday.ejs')
+  }
 })
 
 router.post('/login', (req, res) => {
@@ -29,7 +38,7 @@ router.post('/login', (req, res) => {
                         gameGenre: gameGenre
                     })
                     .save()
-                    .then(result => 
+                    .then(result =>
                         res.redirect('/profile/' + result.username)
                     )
                 })
