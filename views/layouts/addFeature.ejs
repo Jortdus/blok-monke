@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('../partials/head'); %>
+    <%- include('../partials/head') %>
 </head>
 <body>
 
@@ -13,40 +13,36 @@
         <section>
             <h2>Welcome <%= profiel.voornaam %> <%= profiel.achternaam %></h2>
             <h1>Results</h1>
-            <h3>Filter</h3>
         </section>   
-
-            <section>
-                    <div class="profielstyling">
-
-                            <img src="../img/fabian.jpeg" class="profielfoto" alt="Profielfoto van fabian vis"/>
-                                <div class="naamSysteem">
-                                    <h1>Fabian Vis</h1>
-                                    <p>Shooters/MMO</p>
-                                    <img src="../img/xbox.png" alt="foto van xboxlogo"/>
-                                </div>
-                                <div class="checkbox">
-                                    <form method='POST' action="/liked">
-                                    <label class="container">
-                                        <input name="voornaam" type="hidden" value="Fabian">
-                                        <input name="achternaam" type="hidden" value="Vis">
-                                        <input name="gamertag" type="hidden" value="deaap2">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <button type="submit" id="submitbutton">Like</button>
-                                    </form>
-                                </div>
-                    </div>
-            </section> 
-            
+           
+        <section>
+                    <img src="static/img/fabian.jpeg" class="profielfoto" alt="Profielfoto van fabian vis"/>
+                        <div class="naamSysteem">
+                            <h1>Fabian Vis</h1>
+                            <p>Shooters/MMO</p>
+                            <img src="static/img/xbox.png" alt="foto van xboxlogo"/>
+                        </div>
+                        <div class="addButton">
+                            <form method='POST' action="/liked">
+                            <label class="container">
+                                <input name="voornaam" type="hidden" value="Fabian">
+                                <input name="achternaam" type="hidden" value="Vis">
+                                <input name="gamertag" type="hidden" value="deaap2">
+                                <span class="checkmark"></span>
+                            </label>
+                            <button type="submit" id="submitbutton">Add</button>
+                            </form>
+                        </div>
+    </section> 
+        
             <section>
                 <div class="profielstyling">
 
-                        <img src="../img/deaap2.jpg" class="profielfoto" alt="Profielfoto van deaap2"/>
+                        <img src="static/img/deaap2.jpg" class="profielfoto" alt="Profielfoto van deaap2"/>
                             <div class="naamSysteem">
                                 <h1>deaap2</h1>
                                 <p>Shooters/MMO</p>
-                                <img src="../img/xbox.png" alt="foto van xboxlogo"/>
+                                <img src="static/img/xbox.png" alt="foto van xboxlogo"/>
                             </div>
                             <div class="checkbox">
                                 <form method='POST' action="/liked">
@@ -60,10 +56,11 @@
                 </div>
         </section> 
 
+
+        
     </main>
     <footer>
         <%- include('../partials/footer'); %>
     </footer>
-    <script src="../script/deleteButton.js"></script>
 </body>
 </html>
