@@ -1,0 +1,44 @@
+
+body {
+  margin: 0 auto;
+}
+
+.profielfoto {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    padding: 1em;
+}
+
+main section:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+    margin: 1em;
+    border-radius: 25px;
+
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+}
+
+.addButton button {
+  background-color: green;
+  border: none;
+  color:white;
+  text-align: center;
+  margin: 1em;
+  padding: 0.8em;
+  border-radius: 15%;
+}
+
+.naamSysteem img {
+    width: 75px;
+    height: 50px;
+    padding: 0em;
+
+
+}
+ 
