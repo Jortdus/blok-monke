@@ -6,12 +6,18 @@
 </head>
 
 <body>
-<h1>thanks for entering your information</h1>
-</body>
+    <main>
+        <img src="<%= profile.profilePicture %>"">
+        <span><%= profile.username %></span>
+        <br> 
+        <span>Country <%= profile.country %></span>
+        <br>
+        <span>Game genre <%= profile.gameGenre %></span>
+    </main>
 
-<footer>
-    <%- include('../partials/footer') %>
-</footer>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
 </body>
 
 </html>
