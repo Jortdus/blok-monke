@@ -13,6 +13,8 @@ router.get('/addGameFeature', (req, res) => {
   })
 })
 
+
+
 router.post('/spel', (req, res) => {
   const game = new Game(req.body)
   game.save().then(() => {

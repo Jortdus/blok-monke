@@ -1,25 +1,23 @@
 const Persoon = require('../model/persoon.js')
 const express = require('express')
 const router = express.Router()
+const scheme = require('../model/user')
 
-
-let persoon = {
-  voornaam: 'Fabian',
-  achternaam: 'Vis',
-  liked: []
-}
-
-router.get('/addFeature', (req, res) => {
-  res.render('layouts/addFeature.ejs', {
-    profiel: persoon
+router.get('/addfeature/:username', (req, res) => {
+  scheme.find().then(results => {
+      res.render('layouts/addFeature', {
+		  profile: results,
+		  username: req.params.username
+      })
   })
 })
+
 
 // Hier wordt alles uit de database gehaald zodat het op de /liked pagina weergegeven kan worden.
 router.get('/liked', (req, res) => {
   Persoon.find().then(results => res.render('layouts/liked.ejs', {
     personen: results,
-    profiel: persoon,
+    
   }))
 })
 // als er op de submit button word geklikt worden de geselecteerde personen naar de database gestuurd.
@@ -30,6 +28,12 @@ router.post('/liked', (req, res) => {
   })
 
 })
+
+router.post('/urlprofile', (req, res) => {
+	const urlProfile = req.body.urlprofile
+	console.log(urlProfile)
+	res.redirect('/addfeature/' + urlProfile)
+  })
 
 router.delete('/delete', (req, res) => {
   Persoon.findByIdAndDelete(req.query.id).then(result => {

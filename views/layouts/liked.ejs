@@ -11,7 +11,7 @@
 
     <main>   
         <section>
-            <h2>Welcome <%= profiel.voornaam %> <%= profiel.achternaam %></h2>
+            <h2>Welcome </h2>
             <h1>People you Liked</h1>
             <h3>Filter</h3>
         </section> 
@@ -20,8 +20,9 @@
             <ul>
                 <% personen.forEach(function(persoon) { %>
                 <li>
-                    <h1><%= persoon.voornaam +  ' ' + persoon.achternaam%></h1>
+                    <img src="<%= persoon.foto %>" class="profielfoto" alt="Profielfoto van fabian vis"/>
                     <h1><%= persoon.gamertag%></h1>
+                    <h1><%= persoon.genre%></h1>
                     <button data-id="<%=persoon._id%>">Remove</button>
                 </li>
                 <% });%>

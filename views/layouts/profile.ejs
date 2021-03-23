@@ -13,6 +13,15 @@
         <span>Country <%= profile.country %></span>
         <br>
         <span>Game genre <%= profile.gameGenre %></span>
+
+
+
+        <form method='POST' action="/urlprofile">
+            
+           
+                <input name="urlprofile" type="hidden" value="<%= profile.username %>">
+            <button type="submit" id="submitbutton">Next Page</button>
+            </form>
     </main>
 
     <footer>
