@@ -10,6 +10,11 @@ const User = require("./model/user.js")
 const steamFetch = require("./route/steamFetch.js")
 const profile = require("./route/profile.js")
 const likeFeature = require("./route/likeFeature")
+const addGameFeature = require("./route/addGameFeature")
+const likingFeature = require('./route/liking.js')
+
+
+
 
 // call on db connection module
 connectDB();
@@ -21,18 +26,20 @@ app.use(bodyParser.urlencoded({
 // sets views folder
 app.set('views', __dirname + '/views')
 
-// static directory designation 
+// static directory designation
 app.use('/static', express.static(__dirname + '/static'))
 
-// view engine designation 
+// view engine designation
 app.set('view engine', 'ejs')
 
 // rendering
 app.use(steamFetch)
 app.use(profile)
 app.use(likeFeature)
+app.use(addGameFeature)
+app.use(likingFeature)
 
-// 404 error handling 
+// 404 error handling
 app.use(function (req, res, next) {
     res.status(404).send("This page does not exist.")
 })
