@@ -7,6 +7,10 @@ let hetSpel = {
   genre: ''
 }
 
+router.get('/notMonday', (req, res) => {
+  res.render('layouts/notMonday.ejs')
+})
+
 router.get('/addGameFeature', (req, res) => {
   res.render('layouts/addGameFeature.ejs', {
     spel: hetSpel
