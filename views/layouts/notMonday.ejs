@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="noNavBorder">
 
 <head>
   <%- include('../partials/head') %>
+  <link rel="stylesheet" href="../../static/css/notMondayPage.css">
 </head>
 
 <body>
-  <main>
+  <main class="notMondayMain">
     <h1>Monkey Monday</h1>
     <p>Oh no! Its not monday, Please come back when its monday.</p>
-
-    <p>Thanks for understanding.</p>
+    <h4>Thanks for understanding.</h4>
+    <img src="../static/images/logo.png" alt="MonkeyMonday logo">
   </main>
   <footer>
-    <%- include('../partials/footer') %>
+    <div class="borderBottom"></div>
+    <script type="text/javascript" href="../static/script/makeItMonday.js"></script>
   </footer>
 </body>
 
