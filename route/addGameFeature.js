@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Game = require('../model/game.js')
+const scheme = require('../model/user')
 
 let hetSpel = {
   name: '',
@@ -11,12 +12,25 @@ router.get('/notMonday', (req, res) => {
   res.render('layouts/notMonday.ejs')
 })
 
-router.get('/addGameFeature', (req, res) => {
-  res.render('layouts/addGameFeature.ejs', {
-    spel: hetSpel
-  })
+
+router.get('/addGameFeature/:username', (req, res) => {
+  scheme.findOne({
+    username: req.params.username
+  }).then(results => {
+    res.render('layouts/addGameFeature.ejs', {
+        profile: results
+    })
+    })
 })
 
+
+
+
+router.post('/urlwijzig', (req, res) => {
+	const urlProfile = req.body.urlprofile
+	console.log(urlProfile)
+	res.redirect('/addGameFeature/' + urlProfile)
+  })
 
 
 router.post('/spel', (req, res) => {
