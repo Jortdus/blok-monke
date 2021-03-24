@@ -40,6 +40,7 @@ footer nav ul li a:active {
   width: 3vw;
   position: fixed;
   right: 0;
+  z-index: 20;
 }
 
 .borderLeft {
@@ -48,6 +49,7 @@ footer nav ul li a:active {
   width: 3vw;
   position: fixed;
   left: 0;
+  z-index: 20;
 }
 
 .borderTop {
@@ -57,6 +59,7 @@ footer nav ul li a:active {
   right: 0;
   left: 0;
   top: 0;
+  z-index: 20;
 }
 
 .borderBottom {
@@ -66,6 +69,19 @@ footer nav ul li a:active {
   right: 0;
   left: 0;
   bottom: 0;
+  z-index: 20;
+}
+
+.borderSides {
+  background-image: url(../images/backgroundSides.png);
+  background-size: 100% 92.4%;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-position: 0 1vh;
+  background-repeat: no-repeat;
+  z-index: 20;
+  pointer-events: none;
 }
 
 .noNavBorder {
