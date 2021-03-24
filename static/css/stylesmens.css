@@ -1,6 +1,5 @@
 body {
     color: rgb(231, 231, 231);
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .logo {
@@ -23,7 +22,7 @@ section {
 
 .container {
     display: flex;
-    background-color: rgb(32, 43, 67);
+    background-color: #A87EB7;
     margin-bottom: 3em;
     flex-wrap: wrap;
     width: 50%;
@@ -129,7 +128,7 @@ li p {
     top: -2px;
     left: -2px;
     position: relative;
-    background-color: rgb(45, 107, 179);
+    background-color: greenyellow;
     content: '';
     display: inline-block;
     visibility: visible;
@@ -143,7 +142,7 @@ li p {
     top: -2px;
     left: -2px;
     position: relative;
-    background-color: rgb(18, 51, 88);
+    background-color: rgb(71, 102, 25);
     content: '';
     display: inline-block;
     visibility: visible;
@@ -155,26 +154,26 @@ li p {
     width: 5em;
     height: 3em;
     border-radius: 7px;
-    border-color: rgb(18, 51, 88);
+    border-color: #8f699c;
     color: white;
     font-weight: bold;
-    background-image: linear-gradient(to right, rgb(45, 107, 179)31px, rgb(236, 54, 54)20px);
+    background-color: #E2BDDB;
 }
 
 #knop:active {
-    background-image: linear-gradient(to right, rgb(19, 45, 75)31px, rgb(99, 20, 20)20px);
+    background-color: #85677f;
 }
 
 
 #likes {
-    background: rgb(45, 107, 179);
+    background-color: #E2BDDB;
     height: 1em;
     width: 50%;
     float: left;
 }
 
 #dislikes {
-    background-color: rgb(236, 54, 54);
+    background-color: white;
     height: 1em;
     width: 50%;
     float: right;
@@ -187,18 +186,14 @@ li p {
 
 
 
-/* footer */
-
-
-
-img {
+.avatar {
     width: 17em;
     height: 17em;
     padding: .5em;
 }
 
-@media only screen and (max-width: 600px) {
-    img {
+@media only screen and (max-width: 700px) {
+    .avatar {
         width: 10em;
         height: 10em;
         margin: auto;
