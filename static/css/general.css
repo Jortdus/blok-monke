@@ -1,9 +1,5 @@
 html {
   background: white;
-  background-image: url(../images/backgroundSides.png);
-  background-size: 95.5% 92%;
-  background-position: 2.5vw 1vh;
-  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
 }
@@ -20,7 +16,7 @@ body {
 }
 
 main {
-  padding: 8%;
+  padding: 2% 8% 17% 8%;;
 }
 
 input {
