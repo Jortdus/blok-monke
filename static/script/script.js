@@ -13,6 +13,7 @@ function calculateBar() {
         const likeOfDislike = likesEnDislikes[i];
         likes += likeOfDislike.like
         dislikes += likeOfDislike.dislike
+        console.log(likeOfDislike);
     }
 
     // De calculatie voor de balk om het gemiddelde te laten zien

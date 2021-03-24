@@ -1,0 +1,245 @@
+/* navigatie */
+nav {
+    height: 4em;
+    background-color: rgb(14, 23, 38);
+    display: flex;
+}
+
+nav p {
+    font-weight: bold;
+    font-size: 2em;
+    padding: .4em 0em 0em .3em;
+    margin: 0;
+}
+
+/* body content */
+
+body {
+    background-color: #131c2e;
+    color: rgb(231, 231, 231);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.logo {
+    height: 1.3em;
+    width: 1.3em;
+    padding-left: .5em;
+    padding-top: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    background-color: rgb(32, 43, 67);
+    margin-bottom: 3em;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+
+.informatiepersoon {
+    flex: 1;
+}
+
+.overmij {
+    width: 90%;
+    margin: auto;
+}
+
+.knoppenblok {
+    width: 100%;
+    padding-bottom: 1em;
+}
+
+.informatiebalk {
+    padding-bottom: 1em;
+    width: 90%;
+    margin: auto;
+}
+
+.debalk {
+    width: 90%;
+    padding-bottom: 1em;
+    margin: auto;
+}
+
+span {
+    color: greenyellow;
+    padding-left: .2em;
+}
+
+form {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    margin: auto;
+}
+
+
+
+h2 {
+    margin: 1em 2em 1em 1.3em;
+}
+
+
+
+ul {
+    padding: 0;
+
+}
+
+li {
+    list-style-type: none;
+    margin: 1em 2em 1em 2em;
+}
+
+li p {
+    font-size: 2em;
+    margin: 0;
+}
+
+
+.roodknop[type='radio']:after {
+    width: 2em;
+    height: 2em;
+    border-radius: 15px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: rgb(236, 54, 54);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.roodknop[type='radio']:checked:after {
+    width: 2em;
+    height: 2em;
+    border-radius: 15px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: rgb(95, 22, 22);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+
+.blauwknop[type='radio']:after {
+    width: 2em;
+    height: 2em;
+    border-radius: 15px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: rgb(45, 107, 179);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.blauwknop[type='radio']:checked:after {
+    width: 2em;
+    height: 2em;
+    border-radius: 15px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: rgb(18, 51, 88);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+
+#knop {
+    width: 5em;
+    height: 3em;
+    border-radius: 7px;
+    border-color: rgb(18, 51, 88);
+    color: white;
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgb(45, 107, 179)31px, rgb(236, 54, 54)20px);
+}
+
+#knop:active {
+    background-image: linear-gradient(to right, rgb(19, 45, 75)31px, rgb(99, 20, 20)20px);
+}
+
+
+#likes {
+    background: rgb(45, 107, 179);
+    height: 1em;
+    width: 50%;
+    float: left;
+}
+
+#dislikes {
+    background-color: rgb(236, 54, 54);
+    height: 1em;
+    width: 50%;
+    float: right;
+}
+
+#all {
+    width: 80%;
+    margin-top: .7em;
+}
+
+
+
+/* footer */
+
+footer {
+    background-color: rgb(32, 43, 67);
+    width: 100%;
+    height: 4em;
+}
+
+a {
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+}
+
+
+nav a {
+    font-size: 3em;
+}
+
+img {
+    width: 17em;
+    height: 17em;
+    padding: .5em;
+}
+
+.footerp {
+    color: grey;
+    font-style: italic;
+    padding: 1.4em 0em 0em 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+    img {
+        width: 10em;
+        height: 10em;
+        margin: auto;
+        padding: .5em;
+    }
+}
