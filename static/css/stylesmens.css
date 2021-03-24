@@ -3,21 +3,21 @@ body {
 }
 
 .logo {
-    height: 1.3em;
-    width: 1.3em;
-    padding-left: .5em;
-    padding-top: 0;
+  height: 1.3em;
+  width: 1.3em;
+  padding-left: .5em;
+  padding-top: 0;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 section {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .container {
@@ -28,98 +28,90 @@ section {
     width: 50%;
 }
 
-
 .informatiepersoon {
-    flex: 1;
+  flex: 1;
 }
 
 .overmij {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 .knoppenblok {
-    width: 100%;
-    padding-bottom: 1em;
+  width: 100%;
+  padding-bottom: 1em;
 }
 
 .informatiebalk {
-    padding-bottom: 1em;
-    width: 90%;
-    margin: auto;
+  padding-bottom: 1em;
+  width: 90%;
+  margin: auto;
 }
 
 .debalk {
-    width: 90%;
-    padding-bottom: 1em;
-    margin: auto;
+  width: 90%;
+  padding-bottom: 1em;
+  margin: auto;
 }
 
 span {
-    color: greenyellow;
-    padding-left: .2em;
+  color: greenyellow;
+  padding-left: .2em;
 }
 
 form {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1em;
-    margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  margin: auto;
 }
-
-
 
 h2 {
-    margin: 1em 2em 1em 1.3em;
+  margin: 1em 2em 1em 1.3em;
 }
 
-
-
 ul {
-    padding: 0;
-
+  padding: 0;
 }
 
 li {
-    list-style-type: none;
-    margin: 1em 2em 1em 2em;
+  list-style-type: none;
+  margin: 1em 2em 1em 2em;
 }
 
 li p {
-    font-size: 2em;
-    margin: 0;
+  font-size: 2em;
+  margin: 0;
 }
 
-
 .roodknop[type='radio']:after {
-    width: 2em;
-    height: 2em;
-    border-radius: 15px;
-    top: -2px;
-    left: -2px;
-    position: relative;
-    background-color: rgb(236, 54, 54);
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
+  width: 2em;
+  height: 2em;
+  border-radius: 15px;
+  top: -2px;
+  left: -2px;
+  position: relative;
+  background-color: rgb(236, 54, 54);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
 }
 
 .roodknop[type='radio']:checked:after {
-    width: 2em;
-    height: 2em;
-    border-radius: 15px;
-    top: -2px;
-    left: -2px;
-    position: relative;
-    background-color: rgb(95, 22, 22);
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
+  width: 2em;
+  height: 2em;
+  border-radius: 15px;
+  top: -2px;
+  left: -2px;
+  position: relative;
+  background-color: rgb(95, 22, 22);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
 }
-
 
 .blauwknop[type='radio']:after {
     width: 2em;
@@ -149,7 +141,6 @@ li p {
     border: 2px solid white;
 }
 
-
 #knop {
     width: 5em;
     height: 3em;
@@ -163,7 +154,6 @@ li p {
 #knop:active {
     background-color: #85677f;
 }
-
 
 #likes {
     background-color: #E2BDDB;
@@ -180,11 +170,9 @@ li p {
 }
 
 #all {
-    width: 80%;
-    margin-top: .7em;
+  width: 80%;
+  margin-top: .7em;
 }
-
-
 
 .avatar {
     width: 17em;
@@ -200,7 +188,6 @@ li p {
         padding: .5em;
     }
 }
-
 
 /* Border  */
 .borderRight {
