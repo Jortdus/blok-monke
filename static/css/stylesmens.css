@@ -1,6 +1,5 @@
 body {
-  color: rgb(231, 231, 231);
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(231, 231, 231);
 }
 
 .logo {
@@ -22,11 +21,11 @@ section {
 }
 
 .container {
-  display: flex;
-  background-color: rgb(32, 43, 67);
-  margin-bottom: 3em;
-  flex-wrap: wrap;
-  width: 50%;
+    display: flex;
+    background-color: #A87EB7;
+    margin-bottom: 3em;
+    flex-wrap: wrap;
+    width: 50%;
 }
 
 .informatiepersoon {
@@ -115,59 +114,59 @@ li p {
 }
 
 .blauwknop[type='radio']:after {
-  width: 2em;
-  height: 2em;
-  border-radius: 15px;
-  top: -2px;
-  left: -2px;
-  position: relative;
-  background-color: rgb(45, 107, 179);
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
+    width: 2em;
+    height: 2em;
+    border-radius: 15px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: greenyellow;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
 }
 
 .blauwknop[type='radio']:checked:after {
-  width: 2em;
-  height: 2em;
-  border-radius: 15px;
-  top: -2px;
-  left: -2px;
-  position: relative;
-  background-color: rgb(18, 51, 88);
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
+    width: 2em;
+    height: 2em;
+    border-radius: 15px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: rgb(71, 102, 25);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
 }
 
 #knop {
-  width: 5em;
-  height: 3em;
-  border-radius: 7px;
-  border-color: rgb(18, 51, 88);
-  color: white;
-  font-weight: bold;
-  background-image: linear-gradient(to right, rgb(45, 107, 179)31px, rgb(236, 54, 54)20px);
+    width: 5em;
+    height: 3em;
+    border-radius: 7px;
+    border-color: #8f699c;
+    color: white;
+    font-weight: bold;
+    background-color: #E2BDDB;
 }
 
 #knop:active {
-  background-image: linear-gradient(to right, rgb(19, 45, 75)31px, rgb(99, 20, 20)20px);
+    background-color: #85677f;
 }
 
 #likes {
-  background: rgb(45, 107, 179);
-  height: 1em;
-  width: 50%;
-  float: left;
+    background-color: #E2BDDB;
+    height: 1em;
+    width: 50%;
+    float: left;
 }
 
 #dislikes {
-  background-color: rgb(236, 54, 54);
-  height: 1em;
-  width: 50%;
-  float: right;
+    background-color: white;
+    height: 1em;
+    width: 50%;
+    float: right;
 }
 
 #all {
@@ -175,20 +174,19 @@ li p {
   margin-top: .7em;
 }
 
-/* footer */
-img {
-  width: 17em;
-  height: 17em;
-  padding: .5em;
+.avatar {
+    width: 17em;
+    height: 17em;
+    padding: .5em;
 }
 
-@media only screen and (max-width: 600px) {
-  img {
-    width: 10em;
-    height: 10em;
-    margin: auto;
-    padding: .5em;
-  }
+@media only screen and (max-width: 700px) {
+    .avatar {
+        width: 10em;
+        height: 10em;
+        margin: auto;
+        padding: .5em;
+    }
 }
 
 /* Border  */
