@@ -35,11 +35,12 @@ router.post('/urlprofile', (req, res) => {
 	res.redirect('/addfeature/' + urlProfile)
   })
 
-router.delete('/delete', (req, res) => {
-  Persoon.findByIdAndDelete(req.query.id).then(result => {
-    console.log(result)
 
-    res.send('Gelukt')
+
+router.post('/deletePersoon', (req, res) => {
+    Persoon.findByIdAndDelete(req.body.deletePersoon).then(result => {
+      console.log(result)
+    res.redirect('/liked')
   })
 })
 

@@ -24,7 +24,12 @@
                     <img src="<%= persoon.foto %>" class="profielfoto" alt="Profielfoto van fabian vis"/>
                     <h1><%= persoon.gamertag%></h1>
                     <h1><%= persoon.genre%></h1>
-                    <button data-id="<%=persoon._id%>">Remove</button>
+
+                    <form method='POST' action="/deletePersoon">
+                        <input name="deletePersoon" type="hidden" value="<%=persoon._id%>">
+                        <button type="submit" id="submitbutton">Remove</button>
+                    </form>
+
                     <form method='POST' action="/urlliked">
                         <input name="urlprofile" type="hidden" value="<%= persoon.gamertag%>">
                         <button type="submit" id="submitbutton">Next Page</button>
