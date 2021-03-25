@@ -35,8 +35,6 @@ router.post('/urlprofile', (req, res) => {
 	res.redirect('/addfeature/' + urlProfile)
   })
 
-
-
 router.post('/deletePersoon', (req, res) => {
     Persoon.findByIdAndDelete(req.body.deletePersoon).then(result => {
       console.log(result)
