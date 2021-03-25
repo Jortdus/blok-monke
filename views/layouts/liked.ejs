@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <%- include('../partials/head') %>
 </head>
 <body>
 
@@ -16,22 +16,32 @@
             <h3>Filter</h3>
         </section> 
 
+        <% personen.forEach(function(persoon) { %>
         <section>
             <ul>
-                <% personen.forEach(function(persoon) { %>
+                
                 <li>
                     <img src="<%= persoon.foto %>" class="profielfoto" alt="Profielfoto van fabian vis"/>
                     <h1><%= persoon.gamertag%></h1>
                     <h1><%= persoon.genre%></h1>
-                    <button data-id="<%=persoon._id%>">Remove</button>
+
+                    <form method='POST' action="/deletePersoon">
+                        <input id="button" name="deletePersoon" type="hidden" value="<%=persoon._id%>">
+                        <button type="submit" id="submitbutton">Remove</button>
+                    </form>
+
+                    <form method='POST' action="/urlliked">
+                        <input name="urlprofile" type="hidden" value="<%= persoon.gamertag%>">
+                        <button type="submit" id="submitbutton">Next Page</button>
+                    </form>
                 </li>
-                <% });%>
             </ul>
         </section>  
+        <% });%>
     </main>
     <footer>
         <%- include('../partials/footer');%>
     </footer>
-    <script src="../../static/script/deleteButton.js"></script>
+    
 </body>
 </html>
