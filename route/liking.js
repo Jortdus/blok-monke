@@ -1,13 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const Like = require('../model/likeSchema');
+const Like = require('../model/persoon');
 
 
 router.get('/mensen',  (req, res ) => {
       Like.find().then(results => res.render('layouts/mensen.ejs',{
       likesendislikes: JSON.stringify(results)
-
-    }))
   })
 
 
