@@ -12,21 +12,19 @@ router.get('/addfeature/:username', (req, res) => {
   })
 })
 
-
 // Hier wordt alles uit de database gehaald zodat het op de /liked pagina weergegeven kan worden.
 router.get('/liked', (req, res) => {
   Persoon.find().then(results => res.render('layouts/liked.ejs', {
     personen: results,
-    
   }))
 })
+
 // als er op de submit button word geklikt worden de geselecteerde personen naar de database gestuurd.
 router.post('/liked', (req, res) => {
   const persoon = new Persoon(req.body)
   persoon.save().then(() => {
     res.redirect('/liked')
   })
-
 })
 
 router.post('/urlprofile', (req, res) => {
