@@ -16,11 +16,13 @@
 
 
 
-        <form method='POST' action="/urlprofile">
-            
-           
+            <form method='POST' action="/urlprofile">
                 <input name="urlprofile" type="hidden" value="<%= profile.username %>">
-            <button type="submit" id="submitbutton">Next Page</button>
+                <button type="submit" id="submitbutton">Start Matching</button>
+            </form>
+            <form method='POST' action="/urlwijzig">
+                <input name="urlprofile" type="hidden" value="<%= profile.username %>">
+                <button type="submit" id="submitbutton">Wijzig</button>
             </form>
     </main>
 

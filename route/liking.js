@@ -6,9 +6,9 @@ const Like = require('../model/persoon');
 router.get('/mensen',  (req, res ) => {
       Like.find().then(results => res.render('layouts/mensen.ejs',{
       likesendislikes: JSON.stringify(results)
-    }  
-    ))
   })
+
+
 
   router.post('/quotes', (req, res) => {
     const radio = req.body.radio

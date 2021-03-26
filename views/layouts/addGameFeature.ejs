@@ -15,7 +15,7 @@
     <div class="schermachtergrond">
       <div class="schermRand">
         <section class="scherm indexscherm" id="mainScherm">
-          <h1>Welcome back!</h1>
+          <h1>Welcome <%= profile.username %></h1>
           <p class="welcomeTekstIndex">Voer het spel in dat je wilt koppelen met je account</p>
             <form action="/spel" method="POST" class="gameInvoerenForm">
               <input type="text" placeholder="Game name" name="name" required>
