@@ -12,6 +12,7 @@ const profile = require("./route/profile.js")
 const likeFeature = require("./route/likeFeature")
 const addGameFeature = require("./route/blogFeature")
 const likingFeature = require('./route/liking.js')
+const login = require("./route/login.js")
 
 // call on db connection module
 connectDB();
@@ -35,6 +36,7 @@ app.use(profile)
 app.use(likeFeature)
 app.use(addGameFeature)
 app.use(likingFeature)
+app.use(login)
 
 // 404 error handling
 app.use(function (req, res, next) {

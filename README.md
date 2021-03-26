@@ -7,7 +7,7 @@
 ![npm](https://img.shields.io/npm/v/npm)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jortdus/blok-monke)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/jortdus/blok-monke)
-[![GitHub license](https://img.shields.io/github/license/pmvdbijl7/matching-app)](https://github.com/jortdus/blok-monke/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/jortdus/blok-monke)](https://github.com/jortdus/blok-monke/blob/main/LICENSE)
 
 Block Tech Assignement; Focus on matching features and Node.JS
 
@@ -60,4 +60,4 @@ This project uses the following open source packages:
 + [Body-parser](https://www.npmjs.com/package/body-parser)
 
 ## License
-Matching app is released under the [MIT](https://github.com/jortdus/blok-tech/blob/main/LICENSE)
+Matching app is released under the [MIT](https://github.com/jortdus/blok-monke/blob/main/LICENSE)
