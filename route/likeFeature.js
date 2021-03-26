@@ -12,21 +12,19 @@ router.get('/addfeature/:username', (req, res) => {
   })
 })
 
-
 // Hier wordt alles uit de database gehaald zodat het op de /liked pagina weergegeven kan worden.
 router.get('/liked', (req, res) => {
   Persoon.find().then(results => res.render('layouts/liked.ejs', {
     personen: results,
-    
   }))
 })
+
 // als er op de submit button word geklikt worden de geselecteerde personen naar de database gestuurd.
 router.post('/liked', (req, res) => {
   const persoon = new Persoon(req.body)
   persoon.save().then(() => {
     res.redirect('/liked')
   })
-
 })
 
 router.post('/urlprofile', (req, res) => {
@@ -35,11 +33,10 @@ router.post('/urlprofile', (req, res) => {
 	res.redirect('/addfeature/' + urlProfile)
   })
 
-router.delete('/delete', (req, res) => {
-  Persoon.findByIdAndDelete(req.query.id).then(result => {
-    console.log(result)
-
-    res.send('Gelukt')
+router.post('/deletePersoon', (req, res) => {
+    Persoon.findByIdAndDelete(req.body.deletePersoon).then(result => {
+      console.log(result)
+    res.redirect('/liked')
   })
 })
 
