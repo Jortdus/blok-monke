@@ -12,7 +12,7 @@ const profile = require("./route/profile.js")
 const likeFeature = require("./route/likeFeature")
 const addGameFeature = require("./route/addGameFeature")
 const likingFeature = require('./route/liking.js')
-
+const login = require("./route/login.js")
 
 
 
@@ -38,6 +38,7 @@ app.use(profile)
 app.use(likeFeature)
 app.use(addGameFeature)
 app.use(likingFeature)
+app.use(login)
 
 // 404 error handling
 app.use(function (req, res, next) {
