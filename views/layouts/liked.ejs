@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/head') %>
 </head>
+
 <body>
 
     <header>
         <%- include('../partials/header');%>
     </header>
 
-    <main>   
+    <main>
         <section class="welcomestyling">
             <h2>People you Liked</h2>
             <p>Check em out!</p>
-        </section> 
+        </section>
 
-        <% personen.forEach(function(persoon) { %>
+        <% personen.forEach((persoon) => { %>
         <section class="profilestyling">
-            <img src="<%= persoon.foto %>" class="profielfoto" alt="Profielfoto van fabian vis"/>
-                <div class="info">
-                    <h1><%= persoon.gamertag%></h1>
-                    <p><%= persoon.genre%></p>
-                    <form method='POST' action="/urlliked">
-                        <input name="urlprofile" type="hidden" value="<%= persoon.gamertag%>">
-                        <button type="submit" id="submitbutton">View profile</button>
-                    </form>
-                </div>
-                <div class="removeButton">
-                    <form method='POST' action="/deletePersoon">
-                        <input id="button" name="deletePersoon" type="hidden" value="<%=persoon._id%>">
-                        <button type="submit" id="submitbutton">Remove</button>
-                    </form>
-                </div>
-        </section>  
+            <img src="<%= persoon.foto %>" class="profielfoto" alt="Profielfoto van fabian vis" />
+            <div class="info">
+                <h1><%= persoon.gamertag%></h1>
+                <p><%= persoon.genre%></p>
+                <form method='POST' action="/urlliked">
+                    <input name="urlprofile" type="hidden" value="<%= persoon.gamertag%>">
+                    <button type="submit" id="submitbutton">View profile</button>
+                </form>
+            </div>
+            <div class="removeButton">
+                <form method='POST' action="/deletePersoon">
+                    <input id="button" name="deletePersoon" type="hidden" value="<%=persoon._id%>">
+                    <button type="submit" id="submitbutton">Remove</button>
+                </form>
+            </div>
+        </section>
         <% });%>
     </main>
     <footer>
         <%- include('../partials/footer');%>
     </footer>
-    
+
 </body>
+
 </html>
