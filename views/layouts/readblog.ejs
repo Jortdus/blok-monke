@@ -11,23 +11,19 @@
     <%- include('../partials/header'); %>
   </header>
 
-  <main>
-    <div class="schermachtergrond">
-      <div class="schermRand">
-        <section class="scherm profielscherm" id="mainScherm">
+  <main id="readblog">
           <h1>Je profiel</h1>
           <p id="gameVerwijdertText" class="GamesList"></p>
             <ul class="GamesList">
-              <% spel.forEach(function(hetSpel) { %>
+              <% blogBase.forEach(function(theBlog) { %>
               <li class="gameItem">
-                <p><%= hetSpel.name %> | <%= hetSpel.genre %></p>
-                <button id="verwijderButton" data-id="<%=hetSpel._id%>">Verwijder</button>
+                <h2>User: <%= theBlog.name %></h2>
+                <h3>Title: <%= theBlog.title %></h3>
+                <p><%= theBlog.message %></p>
+                <button id="verwijderButton" data-id="<%=theBlog._id%>">Verwijder</button>
               </li>
               <% });%>
             </ul>
-        </section>
-      </div>
-    </div>
   </main>
 
   <footer>

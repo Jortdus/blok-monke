@@ -2,31 +2,37 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head') %>
+  <%- include('../partials/head') %>
 </head>
 
 <body>
-    <main>
-        <img src="<%= profile.profilePicture %>"">
+  <main>
+    <img src="<%= profile.profilePicture %>"">
         <span><%= profile.username %></span>
-        <br> 
+        <br>
         <span>Country <%= profile.country %></span>
         <br>
         <span>Game genre <%= profile.gameGenre %></span>
 
 
 
-        <form method='POST' action="/urlprofile">
-            
-           
-                <input name="urlprofile" type="hidden" value="<%= profile.username %>">
-            <button type="submit" id="submitbutton">Next Page</button>
-            </form>
-    </main>
+        <form method='POST' action=" /urlprofile">
 
-    <footer>
-        <%- include('../partials/footer') %>
-    </footer>
+
+    <input name="urlprofile" type="hidden" value="<%= profile.username %>">
+    <button type="submit" id="submitbutton">Next Page</button>
+    </form>
+
+    <form method='POST' action="/urlblog">
+      <input name="urlblog" type="hidden" value="<%= profile.username %>">
+      <button type="submit" id="submitbutton">Blog</button>
+    </form>
+
+  </main>
+
+  <footer>
+    <%- include('../partials/footer') %>
+  </footer>
 </body>
 
 </html>
