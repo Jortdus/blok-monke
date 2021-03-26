@@ -14,18 +14,19 @@
     <main>
         <section>
             <article class="container">
-                <img class="avatar" src="/static/images/kat4.jpg" alt="Yeboy">
+                <img class="avatar" src="<%= profile.foto %>" alt="Yeboy">
                 <article class="informatiepersoon">
-                    <h2>Me Boy</h2>
+                    <h2><%= profile.gamertag %></h2>
                     <ul>
                         <li class="persooninfo">
                             <p>Leeftijd: 20</p>
                             <p>Land: Nederland</p>
-                            <p>Favoriete game: Tetris</p>
+                            <p><%= profile.genre %></p>
                             <p>Status:<span>Online</span></p>
                         </li>
                     </ul>
                 </article>
+                
                 <article class="overmij">
                     <h3>Over mij</h3>
                     <P> Hallo ik ben yeboy. Ik zoek naar iemand om even mee te gamen want me vrienden zijn op vakantie.
