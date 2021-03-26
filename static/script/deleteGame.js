@@ -17,10 +17,8 @@ function verwijderGame(clickevent) {
         setTimeout(function() {
             window.location.reload()
           },
-          1000
+          3000
         );
       }
     })
 }
-
-

@@ -12,8 +12,8 @@
   </header>
 
   <main id="blog">
-    <h1>Blog <%= username %></h1>
-    <p>Hi there, do you want to write a blog or read the blogs?</p>
+    <h1>Blog</h1>
+    <p>Hi there <%= username %>, do you want to write a blog or read the blogs?</p>
     <form method='POST' action="/urlblogwrite">
       <input name="urlblogwrite" type="hidden" value="<%= username %>">
       <button type="submit" id="submitbutton"><img src="../../static/images/writeblog.png" alt="writeBlog icon"></button>

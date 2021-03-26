@@ -81,7 +81,7 @@
 
 /* Writeblog.ejs */
 #writeblog {
-  height: 100%;
+  height: 80%;
   display: grid;
   grid-template-rows: 10% 90%;
 }
