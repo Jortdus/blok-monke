@@ -1,15 +1,80 @@
+/* index.ejs */
+#index form {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 50% 50%;
+}
+
+#index label {
+  margin-top: 0.5em;
+}
+
+#index input {
+  margin-top: 0.5em;
+}
+
+#index form input:last-of-type {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: #161426;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+#index select {
+  margin-top: 0.5em;
+}
+
+#index form a {
+  grid-row-start: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 0.5em;
+}
+
+/* login.ejs */
+#login form {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 50% 50%;
+}
+
+#login form label {
+  text-align: end;
+  margin: 0.6em 0.3em;
+}
+
+#login form input:last-of-type {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: #161426;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+#login form a {
+  grid-row-start: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 0.5em;
+}
+
 /* NotMondayPage.ejs */
-.notMondayMain {
+#notMondayMain {
   height: 90vh;
 }
 
-.notMondayMain h1 {
+#notMondayMain h1 {
   font-size: 1.7em;
   position: absolute;
   top: 12vh;
 }
 
-.notMondayMain p {
+#notMondayMain p {
   font-size: 1em;
   position: absolute;
   top: 35vh;
@@ -17,14 +82,14 @@
   width: 50vw;
 }
 
-.notMondayMain h4 {
+#notMondayMain h4 {
   font-size: 1em;
   font-style: italic;
   position: absolute;
   bottom: 32vh;
 }
 
-.notMondayMain img {
+#notMondayMain img {
   height: 19%;
   width: auto;
   position: absolute;
@@ -181,4 +246,44 @@
 
 #readblog ul li textarea {
   font-family: raleway, sans-serif;
+}
+
+/* Profiel.ejs */
+#profile section {
+  padding: 0.5em;
+  margin-top: 0.5em;
+  word-wrap: break-word;
+  background: #A87EB7;
+  border-radius: 10px;
+}
+
+#profile section img {
+  width: 25%;
+  height: auto;
+}
+
+#profile h2 {
+  margin-top: 0.5em;
+}
+
+#profile p {
+  margin-top: 0.5em;
+  font-size: 0.7em;
+  font-weight: 300;
+}
+
+#profile form button {
+  margin-top: 1em;
+  background-color: #E2BDDB;
+  border: solid #161426 1px;
+  border-radius: 4px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 5vh;
+  width: 40vw;
+  font-weight: bold;
+  outline: none;
 }

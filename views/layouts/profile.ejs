@@ -6,28 +6,22 @@
 </head>
 
 <body>
-  <main>
-    <img src="<%= profile.profilePicture %>"">
-        <span><%= profile.username %></span>
-        <br>
-        <span>Country <%= profile.country %></span>
-        <br>
-        <span>Game genre <%= profile.gameGenre %></span>
-
-
-
-        <form method='POST' action=" /urlprofile">
-
-
-    <input name="urlprofile" type="hidden" value="<%= profile.username %>">
-    <button type="submit" id="submitbutton">Next Page</button>
-    </form>
-
-    <form method='POST' action="/urlblog">
-      <input name="urlblog" type="hidden" value="<%= profile.username %>">
-      <button type="submit" id="submitbutton">Blog</button>
-    </form>
-
+  <main id="profile">
+    <h1>Profile</h1>
+    <section>
+      <img src="<%= profile.profilePicture %>">
+      <h2>Username: <%= profile.username %><h2>
+          <p>Country: <%= profile.country %></p>
+          <p>Game genre: <%= profile.gameGenre %></p>
+          <form method='POST' action=" /urlprofile">
+            <input name="urlprofile" type="hidden" value="<%= profile.username %>">
+            <button type="submit" id="submitbutton">Start Matching</button>
+          </form>
+          <form method='POST' action="/urlblog">
+            <input name="urlblog" type="hidden" value="<%= profile.username %>">
+            <button type="submit" id="submitbutton">Blog</button>
+          </form>
+    </section>
   </main>
 
   <footer>
