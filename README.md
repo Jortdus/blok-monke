@@ -60,4 +60,4 @@ This project uses the following open source packages:
 + [Body-parser](https://www.npmjs.com/package/body-parser)
 
 ## License
-Matching app is released under the [MIT](https://github.com/jortdus/blok-tech/blob/main/LICENSE)
+Matching app is released under the [MIT](https://github.com/jortdus/blok-monke/blob/main/LICENSE)
