@@ -10,32 +10,28 @@
     </header>
 
     <main>   
-        <section>
-            <h2>Welcome </h2>
-            <h1>People you Liked</h1>
-            <h3>Filter</h3>
+        <section class="welcomestyling">
+            <h2>People you Liked</h2>
+            <p>Check them out!</p>
         </section> 
 
         <% personen.forEach(function(persoon) { %>
-        <section>
-            <ul>
-                
-                <li>
-                    <img src="<%= persoon.foto %>" class="profielfoto" alt="Profielfoto van fabian vis"/>
+        <section class="profilestyling">
+            <img src="<%= persoon.foto %>" class="profielfoto" alt="Profielfoto van fabian vis"/>
+                <div class="info">
                     <h1><%= persoon.gamertag%></h1>
-                    <h1><%= persoon.genre%></h1>
-
+                    <p><%= persoon.genre%></p>
+                    <form method='POST' action="/urlliked">
+                        <input name="urlprofile" type="hidden" value="<%= persoon.gamertag%>">
+                        <button type="submit" id="submitbutton">View profile</button>
+                    </form>
+                </div>
+                <div class="removeButton">
                     <form method='POST' action="/deletePersoon">
                         <input id="button" name="deletePersoon" type="hidden" value="<%=persoon._id%>">
                         <button type="submit" id="submitbutton">Remove</button>
                     </form>
-
-                    <form method='POST' action="/urlliked">
-                        <input name="urlprofile" type="hidden" value="<%= persoon.gamertag%>">
-                        <button type="submit" id="submitbutton">Next Page</button>
-                    </form>
-                </li>
-            </ul>
+                </div>
         </section>  
         <% });%>
     </main>

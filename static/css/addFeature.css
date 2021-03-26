@@ -1,0 +1,82 @@
+body {
+  margin: 0 auto;
+}
+
+.welcomestyling p{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.profielfoto {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  padding: 1em;
+}
+
+.profilestyling {
+  display: flex;
+  justify-content: space-between;
+  background-color:  #A87EB7;
+  margin: 1em;
+  margin-bottom: 2em;
+  border-radius: 25px;
+}
+.profilestyling h1{
+  color: white;
+  font-size: 1.5em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.profilestyling p {
+  margin: 0;
+  text-align: center;
+}
+.addButton {
+  display: flex;
+  align-items: center;
+}
+
+.addButton button {
+  background-color: #383636;
+  border: none;
+  color: white;
+  text-transform: lowercase;
+  text-align: center;
+  margin: 1em;
+  padding: 0.8em;
+  border-radius: 10%;
+}
+
+.removeButton {
+  display: flex;
+  align-items: center;
+}
+
+.removeButton button {
+  background-color: #c71e1e;
+  border: none;
+  color: white;
+  text-transform: lowercase;
+  text-align: center;
+  margin: 1em;
+  padding: 0.8em;
+  border-radius: 10%;
+}
+
+.info button {
+  background: none;
+  border: none;
+  color: white;
+  text-transform: lowercase;
+  text-align: center;
+  margin: 1em;
+  margin-top: 0.5em;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+

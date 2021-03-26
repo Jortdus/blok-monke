@@ -10,19 +10,20 @@
     </header>
 
     <main>   
-        <section>
-            <h2>Welcome <%= username %></h2>
-            <h1>Results</h1>
-        </section>   
+        <section class="welcomestyling">
+            <h2>Welcome <%= username %>!</h2>
+            <p>Find fellow gamers</p>
+        </section>      
+
         <% profile.forEach(function(steamprofile) { %>
-        <section>
-                    <img src="<%= steamprofile.profilePicture %>" class="profielfoto" alt="Profielfoto van fabian vis"/>
-                        <div class="naamSysteem">
-                            <h1><%= steamprofile.username %></h1>
-                            <p><%= steamprofile.gameGenre %></p>
-                        </div>
-                        <div class="addButton">
-                            <form method='POST' action="/liked">
+            <section class="profilestyling">
+                <img src="<%= steamprofile.profilePicture %>" class="profielfoto" alt="Profielfoto van fabian vis"/>
+                    <div class="info">
+                        <h1><%= steamprofile.username %></h1>
+                        <p><%= steamprofile.gameGenre %></p>
+                    </div>
+                    <div class="addButton">
+                        <form method='POST' action="/liked">
                             <label class="container">
                                 <input name="foto" type="hidden" value="<%= steamprofile.profilePicture %>">
                                 <input name="genre" type="hidden" value="<%= steamprofile.gameGenre %>">
@@ -30,34 +31,10 @@
                                 <span class="checkmark"></span>
                             </label>
                             <button type="submit" id="submitbutton">Add</button>
-                            </form>
-                        </div>
-        </section> 
-        <% });%>
-        
-            <section>
-                <div class="profielstyling">
-
-                        <img src="static/img/deaap2.jpg" class="profielfoto" alt="Profielfoto van deaap2"/>
-                            <div class="naamSysteem">
-                                <h1>deaap2</h1>
-                                <p>Shooters/MMO</p>
-                                <img src="static/img/xbox.png" alt="foto van xboxlogo"/>
-                            </div>
-                            <div class="checkbox">
-                                <form method='POST' action="/liked">
-                                <label class="container">
-                                    <input name="gamertag" type="hidden" value="deaap2">
-                                    <span class="checkmark"></span>
-                                  </label>
-                                  <button type="submit" id="submitbutton">Like</button>
-                                  </form>
-                            </div>
-                </div>
-        </section> 
-
-
-        
+                        </form>
+                    </div>
+            </section> 
+        <% });%>     
     </main>
     <footer>
         <%- include('../partials/footer'); %>
