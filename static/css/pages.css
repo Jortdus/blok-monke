@@ -165,6 +165,18 @@
 
 #readblog ul li button {
   margin-top: 1em;
+  background-color: #E2BDDB;
+  border: solid #161426 1px;
+  border-radius: 4px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 5vh;
+  width: 25vw;
+  font-weight: bold;
+  outline: none;
 }
 
 #readblog ul li textarea {

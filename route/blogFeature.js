@@ -14,15 +14,15 @@ router.get('/notMonday', (req, res) => {
 
 router.get('/blog/:username', (req, res) => {
   res.render('layouts/blog', {
-  username: req.params.username
+    username: req.params.username
   })
 })
 
 router.post('/urlblog', (req, res) => {
-	const urlBlog = req.body.urlblog
-	console.log(urlBlog)
-	res.redirect('/blog/' + urlBlog)
-  })
+  const urlBlog = req.body.urlblog
+  console.log(urlBlog)
+  res.redirect('/blog/' + urlBlog)
+})
 
 router.get('/writeblog/:username', (req, res) => {
   res.render('layouts/writeblog.ejs', {
@@ -32,10 +32,10 @@ router.get('/writeblog/:username', (req, res) => {
 })
 
 router.post('/urlblogwrite', (req, res) => {
-	const urlBlogWrite = req.body.urlblogwrite
-	console.log(urlBlogWrite)
-	res.redirect('/writeblog/' + urlBlogWrite)
-  })
+  const urlBlogWrite = req.body.urlblogwrite
+  console.log(urlBlogWrite)
+  res.redirect('/writeblog/' + urlBlogWrite)
+})
 
 router.post('/blog', (req, res) => {
   const blog = new BlogRouter(req.body)
@@ -58,14 +58,5 @@ router.delete('/deleteGame', (req, res) => {
     res.send('gelukt')
   })
 })
-
-// update test
-// router.update('/updateGame', (req, res) => {
-//   BlogRouter.findByIdAndUpdate(req.query.id).then(results => {
-//     { name: "swag" }
-//     console.log(results);
-//     res.send('gelukt')
-//   })
-// })
 
 module.exports = router
