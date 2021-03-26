@@ -1,9 +1,15 @@
+<noscript>
+  You dont have JavaScript enabled.
+</noscript>
+
 <nav>
   <ul>
-    <li><a href="/addFeature/:username"><img src="../../static/images/like.png" alt="Like button"></a></li>
-    <li><a href="/"><img src="../../static/images/home.png" alt="Home button"></a></li>
-    <li><a href="/addGameFeatureProfiel"><img src="../../static/images/profiel.png" alt="profiel button"></a></li>
+    <li><button onclick="goBack()"><img src="../../static/images/back.png" alt="Like button"></button></li>
+    <li><a href="/"><button><img src="../../static/images/home.png" alt="Home button"></button></a></li>
+    <li><button onclick="goForward()"><img src="../../static/images/forward.png" alt="profiel button"></button></li>
   </ul>
 </nav>
 
+<script src="../../static/script/navigatie.js"></script>
 <script src="../../static/script/deleteGame.js"></script>
+<script src="../../static/script/updateGame.js"></script>

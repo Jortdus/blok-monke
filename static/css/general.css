@@ -13,19 +13,21 @@ body {
   font-weight: 400;
   font-style: normal;
   margin: 0;
+  height: 100%;
 }
 
 main {
-  padding: 2% 8% 17% 8%;
+  padding: 3% 8% 17% 8%;
   ;
 }
 
 input {
+  font-family: raleway, sans-serif;
   background-color: #E2BDDB;
   border: solid #161426 1px;
   border-radius: 4px;
   color: black;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -34,4 +36,8 @@ input {
 
 main h1 {
   font-size: 1.7em;
+}
+
+footer noscript {
+  padding: 0 0 0 15vw;
 }
