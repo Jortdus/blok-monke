@@ -14,6 +14,7 @@ const addGameFeature = require("./route/blogFeature")
 const likingFeature = require('./route/liking.js')
 const login = require("./route/login.js")
 
+
 // call on db connection module
 connectDB();
 
@@ -40,7 +41,7 @@ app.use(login)
 
 // 404 error handling
 app.use(function (req, res, next) {
-    res.status(404).send("This page does not exist.")
+    res.status(404).render('layouts/error.ejs')
 })
 
 app.listen(port, () => {

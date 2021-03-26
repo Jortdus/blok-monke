@@ -26,6 +26,7 @@ section {
     margin-bottom: 3em;
     flex-wrap: wrap;
     width: 90%;
+    border-radius: 25px;
 }
 
 .informatiepersoon {
@@ -46,6 +47,7 @@ section {
   padding-bottom: 1em;
   width: 90%;
   margin: auto;
+  margin-left: 1.5em;
 }
 
 .debalk {
@@ -68,7 +70,7 @@ form {
 }
 
 h2 {
-  margin: 1em 2em 1em 1.3em;
+  margin: 1em 2em 1em 1em;
 }
 
 ul {
@@ -77,11 +79,11 @@ ul {
 
 .persooninfo {
   list-style-type: none;
-  margin: 1em 2em 1em 2em;
+  margin: 1em 2em 1em 1.5em;
 }
 
 li p {
-  font-size: 2em;
+  font-size: 1.2em;
   margin: 0;
 }
 
@@ -178,6 +180,15 @@ li p {
     width: 17em;
     height: 17em;
     padding: .5em;
+}
+.errorfoto{
+  width: 16em;
+  margin: auto;
+  padding: 1em;
+}
+
+.errortext{
+  padding: 1em;
 }
 
 @media only screen and (max-width: 700px) {
