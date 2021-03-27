@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+
+  <main id="readblog">
+    <h1>Reading blogs</h1>
+    <p id="deletedBlogText"></p>
+    <ul>
+      <% blogBase.forEach(function(theBlog) { %>
+      <li>
+        <h2>User: <%= theBlog.name %></h2>
+        <h3>Title: <%= theBlog.title %></h3>
+        <p><%= theBlog.message %></p>
+        <form method='POST' action="/deleteBlog">
+            <input id="button" name="deleteBlog" type="hidden" value="<%=theBlog._id%>">
+            <button type="submit" id="submitbutton">Delete</button>
+        </form>
+      </li>
+      <% });%>
+    </ul>
+  </main>
+
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+
+</body>
+
+</html>

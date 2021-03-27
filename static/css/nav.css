@@ -22,6 +22,12 @@ footer nav ul li {
   list-style: none;
 }
 
+footer nav ul li button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
 footer nav ul li img {
   padding-top: 0.5em;
   height: 60%;

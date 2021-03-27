@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+
+  <main id="blog">
+    <h1>Blog</h1>
+    <p>Hi there <%= username %>, do you want to write a blog or read the blogs?</p>
+    <form method='POST' action="/urlblogwrite">
+      <input name="urlblogwrite" type="hidden" value="<%= username %>">
+      <button type="submit" id="submitbutton"><img src="../../static/images/writeblog.png" alt="writeBlog icon"></button>
+    </form>
+
+    <a href="/readblog"><button type="button" name="readBlog"><img src="../../static/images/readblog.png" alt="readBlog icon"></button></a>
+
+  </main>
+
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+
+</body>
+
+</html>

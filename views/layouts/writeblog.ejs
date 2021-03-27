@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+
+  <main id="writeblog">
+    <h1>Write a blog</h1>
+    <form action="/blog" method="POST" class="gameInvoerenForm">
+      <p>Username:</p><input type="text" placeholder="<%= username %>" value="<%= username %>" name="name" readonly> <br>
+      <p>Blog title:</p><input type="text" placeholder="max 20 char" name="title" maxlength="20" required onchange="checkTheWord()" id="writeablogtitle"> <br>
+      <p>Message:</p><textarea type="text" placeholder="max 120 char" name="message" maxlength="120" required id="writeablogmessage"></textarea> <br>
+      <button type="submit">Write</button>
+    </form>
+  </main>
+
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+
+</body>
+
+</html>

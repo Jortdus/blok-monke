@@ -2,33 +2,31 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head') %>
+  <%- include('../partials/head') %>
 </head>
 
 <body>
-    <main>
-        <img src="<%= profile.profilePicture %>"">
-        <span><%= profile.username %></span>
-        <br> 
-        <span>Country <%= profile.country %></span>
-        <br>
-        <span>Game genre <%= profile.gameGenre %></span>
+  <main id="profile">
+    <h1>Profile</h1>
+    <section>
+      <img src="<%= profile.profilePicture %>">
+      <h2>Username: <%= profile.username %><h2>
+          <p>Country: <%= profile.country %></p>
+          <p>Game genre: <%= profile.gameGenre %></p>
+          <form method='POST' action=" /urlprofile">
+            <input name="urlprofile" type="hidden" value="<%= profile.username %>">
+            <button type="submit" id="submitbutton">Start Matching</button>
+          </form>
+          <form method='POST' action="/urlblog">
+            <input name="urlblog" type="hidden" value="<%= profile.username %>">
+            <button type="submit" id="submitbutton">Blog</button>
+          </form>
+    </section>
+  </main>
 
-
-
-            <form method='POST' action="/urlprofile">
-                <input name="urlprofile" type="hidden" value="<%= profile.username %>">
-                <button type="submit" id="submitbutton">Start Matching</button>
-            </form>
-            <form method='POST' action="/urlwijzig">
-                <input name="urlprofile" type="hidden" value="<%= profile.username %>">
-                <button type="submit" id="submitbutton">Wijzig</button>
-            </form>
-    </main>
-
-    <footer>
-        <%- include('../partials/footer') %>
-    </footer>
+  <footer>
+    <%- include('../partials/footer') %>
+  </footer>
 </body>
 
 </html>

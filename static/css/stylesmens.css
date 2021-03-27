@@ -1,5 +1,5 @@
 body {
-    color: rgb(231, 231, 231);
+  color: rgb(231, 231, 231);
 }
 
 .logo {
@@ -21,11 +21,12 @@ section {
 }
 
 .container {
-    display: flex;
-    background-color: #A87EB7;
-    margin-bottom: 3em;
-    flex-wrap: wrap;
-    width: 90%;
+  display: flex;
+  background-color: #A87EB7;
+  margin-bottom: 3em;
+  flex-wrap: wrap;
+  width: 90%;
+  border-radius: 25px;
 }
 
 .informatiepersoon {
@@ -46,6 +47,7 @@ section {
   padding-bottom: 1em;
   width: 90%;
   margin: auto;
+  margin-left: 1.5em;
 }
 
 .debalk {
@@ -68,7 +70,7 @@ form {
 }
 
 h2 {
-  margin: 1em 2em 1em 1.3em;
+  margin: 1em 2em 1em 1em;
 }
 
 ul {
@@ -77,11 +79,11 @@ ul {
 
 .persooninfo {
   list-style-type: none;
-  margin: 1em 2em 1em 2em;
+  margin: 1em 2em 1em 1.5em;
 }
 
 li p {
-  font-size: 2em;
+  font-size: 1.2em;
   margin: 0;
 }
 
@@ -114,59 +116,59 @@ li p {
 }
 
 .blauwknop[type='radio']:after {
-    width: 2em;
-    height: 2em;
-    border-radius: 15px;
-    top: -2px;
-    left: -2px;
-    position: relative;
-    background-color: greenyellow;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
+  width: 2em;
+  height: 2em;
+  border-radius: 15px;
+  top: -2px;
+  left: -2px;
+  position: relative;
+  background-color: greenyellow;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
 }
 
 .blauwknop[type='radio']:checked:after {
-    width: 2em;
-    height: 2em;
-    border-radius: 15px;
-    top: -2px;
-    left: -2px;
-    position: relative;
-    background-color: rgb(71, 102, 25);
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
+  width: 2em;
+  height: 2em;
+  border-radius: 15px;
+  top: -2px;
+  left: -2px;
+  position: relative;
+  background-color: rgb(71, 102, 25);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
 }
 
 #knop {
-    width: 5em;
-    height: 3em;
-    border-radius: 7px;
-    border-color: #8f699c;
-    color: white;
-    font-weight: bold;
-    background-color: #E2BDDB;
+  width: 5em;
+  height: 3em;
+  border-radius: 7px;
+  border-color: #8f699c;
+  color: white;
+  font-weight: bold;
+  background-color: #E2BDDB;
 }
 
 #knop:active {
-    background-color: #85677f;
+  background-color: #85677f;
 }
 
 #likes {
-    background-color: #E2BDDB;
-    height: 1em;
-    width: 50%;
-    float: left;
+  background-color: #E2BDDB;
+  height: 1em;
+  width: 50%;
+  float: left;
 }
 
 #dislikes {
-    background-color: white;
-    height: 1em;
-    width: 50%;
-    float: right;
+  background-color: white;
+  height: 1em;
+  width: 50%;
+  float: right;
 }
 
 #all {
@@ -175,18 +177,27 @@ li p {
 }
 
 .avatar {
-    width: 17em;
-    height: 17em;
-    padding: .5em;
+  width: 17em;
+  height: 17em;
+  padding: .5em;
+}
+.errorfoto{
+  width: 16em;
+  margin: auto;
+  padding: 1em;
+}
+
+.errortext{
+  padding: 1em;
 }
 
 @media only screen and (max-width: 700px) {
-    .avatar {
-        width: 10em;
-        height: 10em;
-        margin: auto;
-        padding: .5em;
-    }
+  .avatar {
+    width: 10em;
+    height: 10em;
+    margin: auto;
+    padding: .5em;
+  }
 }
 
 /* Border  */
