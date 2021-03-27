@@ -82,3 +82,21 @@ body {
   outline: inherit;
   font-size: 0.8em;
 }
+
+
+.viewLiked {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+ 
+.viewLiked button {
+  background-color: #81618c;
+  border: none;
+  color: white;
+  text-transform: lowercase;
+  text-align: center;
+  margin: 1em;
+  padding: 0.8em;
+  border-radius: 10px;
+}
