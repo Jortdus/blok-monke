@@ -13,6 +13,7 @@ router.get('/mensen/:username',  (req, res ) => {
       likesendislikes: JSON.stringify(results)
     })
   })
+})
 
   router.post('/quotes', (req, res) => {
    const likeofdislike = req.body.likeofdislike
