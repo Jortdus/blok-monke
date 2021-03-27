@@ -20,7 +20,10 @@
         <h2>User: <%= theBlog.name %></h2>
         <h3>Title: <%= theBlog.title %></h3>
         <p><%= theBlog.message %></p>
-        <button id="verwijderButton" data-id="<%=theBlog._id%>">Delete</button>
+        <form method='POST' action="/deleteBlog">
+            <input id="button" name="deleteBlog" type="hidden" value="<%=theBlog._id%>">
+            <button type="submit" id="submitbutton">Delete</button>
+        </form>
       </li>
       <% });%>
     </ul>
