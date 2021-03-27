@@ -17,12 +17,13 @@ body {
 .profilestyling {
   display: flex;
   justify-content: space-between;
-  background-color:  #A87EB7;
+  background-color: #A87EB7;
   margin: 1em;
   margin-bottom: 2em;
   border-radius: 25px;
 }
-.profilestyling h1{
+
+.profilestyling h1 {
   color: white;
   font-size: 1em;
   margin-top: 1em;
@@ -34,6 +35,7 @@ body {
   text-align: center;
   font-size: 0.8em;
 }
+
 .addButton {
   display: flex;
   align-items: center;
@@ -79,7 +81,4 @@ body {
 	cursor: pointer;
   outline: inherit;
   font-size: 0.8em;
-  
 }
-
-
