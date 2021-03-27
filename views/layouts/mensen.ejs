@@ -32,53 +32,27 @@
                 </article>
                 <article class="knoppenblok">
                     <form action="/quotes" method="POST">
-                        <input type="radio" id="roodestip" value="2" class="roodknop" name="radio" required>
+                        <input type="radio" id="roodestip" value="dislike" class="roodknop" name="likeofdislike" required>
                         <button id="knop" type="submit">Submit</button>
-                        <input type="radio" id="groenestip" value="1" class="blauwknop" name="radio">  
+                        <input type="radio" id="groenestip" value="like" class="blauwknop" name="likeofdislike">  
+                        <input type="hidden" name="profile" value="<%= profile._id %>">
                     </form>
                 </article>
                 <article class="debalk">
-                    <div id="bar" data-likesendislikes="<%=likesendislikes%>">
-                        <div id="likes"></div>
-                        <div id="dislikes"></div>
+                    <div id="bar">
+                        <div id="likes" data-like="<%= profile.like %>"></div>
+                        <div id="dislikes" data-dislike="<%= profile.dislike %>"></div>
                     </div>
                 </article> 
             </article>
         </section>
     </main>
 
-        <article class="overmij">
-          <h3>Over mij</h3>
-          <P> Hallo ik ben yeboy. Ik zoek naar iemand om even mee te gamen want me vrienden zijn op vakantie.
-            Ik speel alleen maar Tetris dus als je niet tetris speelt kan je me beter skippen. Spreek je
-            dan! mijn discord is: (discord link) </P>
-        </article>
-        <article class="informatiebalk">
-          <h3>Wat is deze balk?</h3>
-          <P> hier kan je deze persoon liken of disliken. Doe dit eerlijk want dit houd het platform fijn om
-            te gebruiken voor iedereen. </P>
-        </article>
-        <article class="knoppenblok">
-          <form action="/quotes" method="POST">
-            <input type="radio" id="roodestip" value="2" class="roodknop" name="radio" required>
-            <button id="knop" type="submit">Submit</button>
-            <input type="radio" id="groenestip" value="1" class="blauwknop" name="radio">
-          </form>
-        </article>
-        <article class="debalk">
-          <div id="bar" data-likesendislikes="<%=likesendislikes%>">
-            <div id="likes"></div>
-            <div id="dislikes"></div>
-          </div>
-        </article>
-      </article>
-    </section>
-  </main>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+    <script src="/static/script/script.js"></script>
 
-  <footer>
-    <%- include('../partials/footer') %>
-  </footer>
-  <script src="../../static/script/script.js"></script>
 </body>
 
 </html>
