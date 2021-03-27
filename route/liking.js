@@ -3,19 +3,16 @@ const router = express.Router();
 const Persoon = require('../model/persoon');
 
 
+
 router.get('/mensen/:username',  (req, res ) => {
   Persoon.findOne({
     gamertag: req.params.username
   }).then(results => {
     res.render('layouts/mensen.ejs', {
-        profile: results,
-        likesendislikes: JSON.stringify(results)
-    })
+      profile: results,
+      likesendislikes: JSON.stringify(results)
     })
   })
-
-
-
 
   router.post('/quotes', (req, res) => {
    const likeofdislike = req.body.likeofdislike
@@ -27,11 +24,9 @@ router.get('/mensen/:username',  (req, res ) => {
 })
 
 router.post('/urlliked', (req, res) => {
-	const urlProfile = req.body.urlprofile
-	console.log(urlProfile)
-	res.redirect('/mensen/' + urlProfile)
-  })
+  const urlProfile = req.body.urlprofile
+  console.log(urlProfile)
+  res.redirect('/mensen/' + urlProfile)
+})
 
-
-
-  module.exports = router;
+module.exports = router;

@@ -52,11 +52,15 @@ router.get('/readblog', (req, res) => {
   }))
 })
 
-router.delete('/deleteGame', (req, res) => {
-  BlogRouter.findByIdAndDelete(req.query.id).then(results => {
-    console.log(results);
-    res.send('gelukt')
-  })
+router.post('/deleteBlog', (req, res) => {
+	BlogRouter.findByIdAndDelete(req.body.deleteBlog).then(result => {
+		console.log(result)
+    setTimeout(function() {
+        res.redirect('/readblog')
+      },
+      1000
+    );
+	})
 })
 
 module.exports = router

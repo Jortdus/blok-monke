@@ -9,9 +9,7 @@ function calculateBar() {
     // let mag ge reasigned worden. Dit doe je bijvoorbeeld bij counters zoals hier
     let likes = +like.dataset.like,
         dislikes = +dislike.dataset.dislike;
-    
-        console.log(likes);
-        console.log(dislikes);
+
 
     // De calculatie voor de balk om het gemiddelde te laten zien
     const total = likes + dislikes;
@@ -19,10 +17,11 @@ function calculateBar() {
     const percentageDisLikes = (dislikes / total) * 100;
     like.style.width = percentageLikes.toString() + '%';
     dislike.style.width = percentageDisLikes.toString() + '%';
+
 }
 
 // Het laad alleen al ben ik op de mensen pagina
 window.addEventListener('load', () => {
     calculateBar();
-})
 
+})
