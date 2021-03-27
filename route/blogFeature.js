@@ -55,12 +55,8 @@ router.get('/readblog', (req, res) => {
 router.post('/deleteBlog', (req, res) => {
 	BlogRouter.findByIdAndDelete(req.body.deleteBlog).then(result => {
 		console.log(result)
-    setTimeout(function() {
         res.redirect('/readblog')
-      },
-      1000
-    );
-	})
+    })
 })
 
 module.exports = router
