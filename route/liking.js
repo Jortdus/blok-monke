@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const Like = require('../model/persoon');
+const Persoon = require('../model/persoon');
 
 
 router.get('/mensen/:username',  (req, res ) => {
-  Like.findOne({
+  Persoon.findOne({
     gamertag: req.params.username
   }).then(results => {
     res.render('layouts/mensen.ejs', {
@@ -18,16 +18,12 @@ router.get('/mensen/:username',  (req, res ) => {
 
 
   router.post('/quotes', (req, res) => {
-    const radio = req.body.radio
-    const likes = new Like({
-      like: radio == 1 ? 1 : 0,
-      dislike: radio == 2 ? 1 : 0
-    })
-    likes.save().then( () => {
-      res.redirect('/')
-
-    })
-
+   const likeofdislike = req.body.likeofdislike
+   Persoon.findByIdAndUpdate(req.body.profile,{
+       $inc:{[likeofdislike]:1}
+   }).then(result => {
+     res.redirect('/liked')
+   })
 })
 
 router.post('/urlliked', (req, res) => {

@@ -32,15 +32,16 @@
                 </article>
                 <article class="knoppenblok">
                     <form action="/quotes" method="POST">
-                        <input type="radio" id="roodestip" value="2" class="roodknop" name="radio" required>
+                        <input type="radio" id="roodestip" value="dislike" class="roodknop" name="likeofdislike" required>
                         <button id="knop" type="submit">Submit</button>
-                        <input type="radio" id="groenestip" value="1" class="blauwknop" name="radio">  
+                        <input type="radio" id="groenestip" value="like" class="blauwknop" name="likeofdislike">  
+                        <input type="hidden" name="profile" value="<%= profile._id %>">
                     </form>
                 </article>
                 <article class="debalk">
-                    <div id="bar" data-likesendislikes="<%=likesendislikes%>">
-                        <div id="likes"></div>
-                        <div id="dislikes"></div>
+                    <div id="bar">
+                        <div id="likes" data-like="<%= profile.like %>"></div>
+                        <div id="dislikes" data-dislike="<%= profile.dislike %>"></div>
                     </div>
                 </article> 
             </article>
@@ -50,7 +51,7 @@
     <footer>
         <%- include('../partials/footer') %>
     </footer>
-    <script src="../../static/script/script.js"></script>
+    <script src="/static/script/script.js"></script>
 </body>
 
 </html>
