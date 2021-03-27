@@ -2,64 +2,63 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/headmens'); %>
+  <%- include('../partials/headmens'); %>
 </head>
 
 <body>
 
-    <header>
+  <header>
 
-    </header>
+  </header>
 
-    <main>
-        <section>
-            <article class="container">
-                <img class="avatar" src="<%= profile.foto %>" alt="Yeboy">
-                <article class="informatiepersoon">
-                    <h2><%= profile.gamertag %></h2>
-                    <ul>
-                        <li class="persooninfo">
-                            <p>Leeftijd: 20</p>
-                            <p>Land: Nederland</p>
-                            <p><%= profile.genre %></p>
-                            <p>Status:<span>Online</span></p>
-                        </li>
-                    </ul>
-                </article>
-                
-                <article class="overmij">
-                    <h3>Over mij</h3>
-                    <P> Hallo ik ben yeboy. Ik zoek naar iemand om even mee te gamen want me vrienden zijn op vakantie.
-                        Ik speel alleen maar Tetris dus als je niet tetris speelt kan je me beter skippen. Spreek je
-                        dan! mijn discord is: (discord link) </P>
-                </article>
-                <article class="informatiebalk">
-                    <h3>Wat is deze balk?</h3>
-                    <P> hier kan je deze persoon liken of disliken. Doe dit eerlijk want dit houd het platform fijn om
-                        te gebruiken voor iedereen. </P>
-                </article>
-                <article class="knoppenblok">
-                    <form action="/quotes" method="POST">
-                        <input type="radio" id="roodestip" value="2" class="roodknop" name="radio" required>
-                        <button id="knop" type="submit">Submit</button>
-                        <input type="radio" id="groenestip" value="1" class="blauwknop" name="radio">  
-                    </form>
-                </article>
-                <article class="debalk">
-                    <div id="bar" data-likesendislikes="<%=likesendislikes%>">
-                        <div id="likes"></div>
-                        <div id="dislikes"></div>
-                    </div>
-                </article> 
-            </article>
-        </section>
-    </main>
+  <main>
+    <section>
+      <article class="container">
+        <img class="avatar" src="<%= profile.foto %>" alt="Yeboy">
+        <article class="informatiepersoon">
+          <h2><%= profile.gamertag %></h2>
+          <ul>
+            <li class="persooninfo">
+              <p>Leeftijd: 20</p>
+              <p>Land: Nederland</p>
+              <p><%= profile.genre %></p>
+              <p>Status:<span>Online</span></p>
+            </li>
+          </ul>
+        </article>
 
-    <footer>
-        <%- include('../partials/footer') %>
-    </footer>
-    <script src="../../static/script/script.js"></script>
+        <article class="overmij">
+          <h3>Over mij</h3>
+          <P> Hallo ik ben yeboy. Ik zoek naar iemand om even mee te gamen want me vrienden zijn op vakantie.
+            Ik speel alleen maar Tetris dus als je niet tetris speelt kan je me beter skippen. Spreek je
+            dan! mijn discord is: (discord link) </P>
+        </article>
+        <article class="informatiebalk">
+          <h3>Wat is deze balk?</h3>
+          <P> hier kan je deze persoon liken of disliken. Doe dit eerlijk want dit houd het platform fijn om
+            te gebruiken voor iedereen. </P>
+        </article>
+        <article class="knoppenblok">
+          <form action="/quotes" method="POST">
+            <input type="radio" id="roodestip" value="2" class="roodknop" name="radio" required>
+            <button id="knop" type="submit">Submit</button>
+            <input type="radio" id="groenestip" value="1" class="blauwknop" name="radio">
+          </form>
+        </article>
+        <article class="debalk">
+          <div id="bar" data-likesendislikes="<%=likesendislikes%>">
+            <div id="likes"></div>
+            <div id="dislikes"></div>
+          </div>
+        </article>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <%- include('../partials/footer') %>
+  </footer>
+  <script src="../../static/script/script.js"></script>
 </body>
 
 </html>
-

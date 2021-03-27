@@ -18,7 +18,7 @@ const login = require("./route/login.js")
 connectDB();
 
 app.use(bodyParser.urlencoded({
-    extended: true
+  extended: true
 }))
 
 // sets views folder
@@ -39,10 +39,10 @@ app.use(likingFeature)
 app.use(login)
 
 // 404 error handling
-app.use(function (req, res, next) {
-    res.status(404).send("This page does not exist.")
+app.use(function(req, res, next) {
+  res.status(404).send("This page does not exist.")
 })
 
 app.listen(port, () => {
-    console.log('Server is running!', port)
+  console.log('Server is running!', port)
 })

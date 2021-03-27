@@ -97,6 +97,10 @@
   left: 30%;
 }
 
+#notMondayBody .borderSides {
+  background-size: 100% 97.6%;
+}
+
 /* Blog.ejs */
 #blog {
   height: 100%;

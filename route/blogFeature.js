@@ -55,7 +55,7 @@ router.get('/readblog', (req, res) => {
 router.delete('/deleteGame', (req, res) => {
   BlogRouter.findByIdAndDelete(req.query.id).then(results => {
     console.log(results);
-    res.send('gelukt')
+    res.send('done')
   })
 })
 

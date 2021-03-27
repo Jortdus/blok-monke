@@ -5,10 +5,10 @@ const scheme = require('../model/user')
 
 router.get('/addfeature/:username', (req, res) => {
   scheme.find().then(results => {
-      res.render('layouts/addFeature', {
-		  profile: results,
-		  username: req.params.username
-      })
+    res.render('layouts/addFeature', {
+      profile: results,
+      username: req.params.username
+    })
   })
 })
 
@@ -28,14 +28,14 @@ router.post('/liked', (req, res) => {
 })
 
 router.post('/urlprofile', (req, res) => {
-	const urlProfile = req.body.urlprofile
-	console.log(urlProfile)
-	res.redirect('/addfeature/' + urlProfile)
-  })
+  const urlProfile = req.body.urlprofile
+  console.log(urlProfile)
+  res.redirect('/addfeature/' + urlProfile)
+})
 
 router.post('/deletePersoon', (req, res) => {
-    Persoon.findByIdAndDelete(req.body.deletePersoon).then(result => {
-      console.log(result)
+  Persoon.findByIdAndDelete(req.body.deletePersoon).then(result => {
+    console.log(result)
     res.redirect('/liked')
   })
 })
