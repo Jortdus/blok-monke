@@ -123,6 +123,7 @@ This project uses the following open source packages:
 + [Express](http://expressjs.com/)
 + [Ejs](http://ejs.co/)
 + [Body-parser](https://www.npmjs.com/package/body-parser)
++ [Mongoose](https://mongoosejs.com/)
 
 ## License
 Matching app is released under the [MIT](https://github.com/jortdus/blok-monke/blob/main/LICENSE)
