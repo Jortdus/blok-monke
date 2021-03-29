@@ -7,7 +7,7 @@
 ![npm](https://img.shields.io/npm/v/npm)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jortdus/blok-monke)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/jortdus/blok-monke)
-![GitHub license](https://img.shields.io/github/license/jortdus/blok-monke)](https://github.com/jortdus/blok-monke/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/jortdus/blok-monke)](https://github.com/jortdus/blok-monke/blob/main/LICENSE)
 
 Block Tech Assignement; Focus on matching features and Node.JS
 
