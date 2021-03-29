@@ -110,7 +110,7 @@ Tim de Roller // [timderoller@gmail.com](timderoller@gmail.com)
 
 Fabian Vis // [fabianvis988@gmail.com](fabianvis988@gmail.com)
 
-Jort 
+Jort Broekhof 
 
 Sietse Roos
 
