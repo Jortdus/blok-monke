@@ -1,3 +1,4 @@
+// script for the page nav
 function goForward() {
   window.history.forward();
 }
