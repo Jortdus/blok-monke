@@ -1,7 +1,7 @@
-# Monke app
+# ![logo](https://user-images.githubusercontent.com/30145681/112718115-386f1a80-8ef1-11eb-9a50-d0c9ffd422ab.png) Monkey Monday
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://blok-monke.herokuapp.com/)
+[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://blok-monke.herokuapp.com/)
 
 ![node-current](https://img.shields.io/node/v/npm)
 ![npm](https://img.shields.io/npm/v/npm)
@@ -19,6 +19,8 @@ A user will login using their steamID or username and in the future with openID 
 ## Table of Contents
 * [Features](#features)
 * [Usage](#usage)
+* [Databse](#Database)
+* [Contributors](#Contributors)
 * [Support](#support)
 * [Credits](#credits)
 * [License](#license)
@@ -46,8 +48,71 @@ To clone and run this application, you need [Git](https://git-scm.com/) and [Nod
 
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
+## Database
+You will need to do a few more things to get it running, first you need to setup your database. You can do this by folowing the documentation of MongoDB. [here is the link](https://docs.mongodb.com/guides/server/drivers/) You will have to make a account/login, create a `cluter`, click on `collections`, and then on `create database`.
+
+If you have a database you will have to create a .env file in the same folder where the sever.js is. 
+Copy this and put it in your .env file
+```
+STEAMAPI=
+HOST=
+PORT=
+DB_NAME= 
+DB_CONNECTION_STRING=
+```
+
+To find the URI needed to connect to your database you will have to select connect when looking at a `cluster`, setup your `connection security`, select connect your application and you will see the link.
+
+`STEAMAPI` is the steam API you have created for the app.
+
+`HOST` is the host (can be localhost)
+
+`PORT` is the port you will use
+
+`DB_NAME` is the name of the database you created
+
+and `DB_CONNECTION_STRING` is the connection string you can get from the MongoDB atlas.
+
+The database will look something like this:
+### Blogs
+| Table | Type | Value |
+| --- | --- | --- |
+| _id | ObjectId | Id mongodb |
+| name | string | maggness |
+| title | string | star wars |
+| message | string | Jij altijd met je starwars |
+
+### persoons
+| Table | Type | Value |
+| --- | --- | --- |
+| _id | ObjectId | Id mongodb |
+| foto | string | https://steamcdn-a.akamaihd.net/steamcommunity/_medium.jpg |
+| genre | string | MMORPG |
+| gamertag | string | deaap2 |
+| like | int32 | 1 |
+| dislike | int32 | 4 |
+
+### users
+| Table | Type | Value |
+| --- | --- | --- |
+| _id | ObjectId | Id mongodb |
+| username | string | maggness |
+| steamID | string | 76561198076958988 |
+| country | string | maggness has decided to not share this information |
+| profilePicture | string | https://steamcdn-a.akamaihd.net/steamcommunity/public/images |
+| gameGenre | string  | FPS |
+
 ## Support
-Don't bother us.
+If there is a problem, please contact us. we are happy to help! You can find our email's down at [Contributors](https://github.com/Jortdus/blok-monke/wiki/readme#Contributors)
+
+## Contributors
+Tim de Roller // [timderoller@gmail.com](timderoller@gmail.com)
+
+Fabian Vis // [fabianvis988@gmail.com](fabianvis988@gmail.com)
+
+Jort 
+
+Sietse Roos
 
 ## Credits
 This project uses the following open source packages:
