@@ -8,6 +8,7 @@ let theBlog = {
   message: ''
 }
 
+// Render the notMonday page
 router.get('/notMonday', (req, res) => {
   res.render('layouts/notMonday.ejs')
 })
@@ -25,6 +26,7 @@ router.post('/urlblog', (req, res) => {
   console.log(urlBlog)
   res.redirect('/blog/' + urlBlog)
 })
+
 
 router.get('/writeblog/:username', (req, res) => {
   res.render('layouts/writeblog.ejs', {
