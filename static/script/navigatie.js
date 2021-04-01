@@ -2,13 +2,13 @@ const forwardnavbutton = document.querySelector('#forwardnav');
 const backwardnavbutton = document.querySelector('#backwardnav');
 
 // script for the page nav
-function goForward() {
-  event.preventDefault();
+function goForward( eventForward ) {
+  eventForward.preventDefault();
   window.history.forward();
 }
 
-function goBack() {
-  event.preventDefault();
+function goBack( eventBackward ) {
+  eventBackward.preventDefault();
   window.history.back();
 }
 
